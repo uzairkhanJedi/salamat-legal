@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salamat — Privacy Policy</title>
+<style>
+  :root { --fg:#1a1a1a; --muted:#5c6672; --accent:#006d5b; --bg:#fff; --rule:#e3e8ec; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#e8eaed; --muted:#9aa5b1; --accent:#3fbfa5; --bg:#14171a; --rule:#2c3237; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 2.5rem 1.25rem 5rem;
+    background: var(--bg); color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .35rem; letter-spacing: -.02em; }
+  h2 {
+    font-size: 1.15rem; margin: 2.5rem 0 .75rem; padding-top: 1.25rem;
+    border-top: 1px solid var(--rule); letter-spacing: -.01em;
+  }
+  .updated { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+  .lede { font-size: 1.05rem; color: var(--fg); }
+  a { color: var(--accent); }
+  strong { font-weight: 600; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .4rem 0; }
+  .callout {
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+    border-left: 3px solid var(--accent);
+    padding: .9rem 1.1rem; border-radius: 0 6px 6px 0; margin: 1.25rem 0;
+  }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Salamat — Privacy Policy</h1>
+  <p class="updated">Last updated: 17 July 2026</p>
+
+  <p class="lede">
+    Salamat is a location-sharing app for families and small groups travelling together for
+    Hajj and Umrah. It exists so the people in your group can see where each other are at the
+    holy sites. This policy explains exactly what we collect, why, who can see it, and how
+    long we keep it.
+  </p>
+  <p>Salamat is operated by Uzair Khan. Contact: <a href="mailto:info@shocute.com">info@shocute.com</a></p>
+
+  <h2>What we collect</h2>
+  <p><strong>Location, including in the background.</strong> Salamat records your device's precise
+  location (latitude and longitude) and sends it to your group. Collection continues when the app
+  is closed or not in use — this is the core purpose of the app. Without background location, your
+  family would only see you while you had the app open, which would make it useless for its
+  intended purpose.</p>
+  <p><strong>Location history.</strong> Each location reading is stored as a historical record, not
+  just your latest position.</p>
+  <p><strong>Battery level.</strong> Your device's battery percentage is shared with your group, so
+  they can tell the difference between "stopped moving" and "phone died".</p>
+  <p><strong>Profile information.</strong> Your phone number, your display name, your chosen
+  language, and — only if you choose to upload one — a profile photo.</p>
+  <p><strong>Push notification token.</strong> A device identifier issued by Firebase Cloud
+  Messaging, used to deliver notifications to your device.</p>
+  <p><strong>Diagnostics.</strong> Crash reports and error diagnostics, collected via Sentry, to fix
+  bugs. These may include your app version, device model, and operating system version.</p>
+
+  <h2>Why we collect it</h2>
+  <p>We use this data only to operate the app:</p>
+  <ul>
+    <li>To show your location to the other members of your group.</li>
+    <li>To notify you about meeting points and group activity.</li>
+    <li>To keep the app working, and to diagnose crashes.</li>
+  </ul>
+  <div class="callout">
+    <strong>We do not sell your data.</strong> We do not share it with advertisers or data brokers.
+    We do not use it for advertising or profiling. We do not use your location for any purpose
+    other than showing it to your own group.
+  </div>
+
+  <h2>Who can see your data</h2>
+  <p><strong>Your location, battery level, name, and photo are visible to the other members of the
+  group you join.</strong> That is the point of the app. They are not visible to the public, and
+  they are not visible to members of other groups.</p>
+  <p>Your data is stored on a private server operated by us on Google Cloud infrastructure. The
+  following third parties process limited data on our behalf:</p>
+  <ul>
+    <li><strong>Google Firebase Cloud Messaging</strong> — delivers push notifications.</li>
+    <li><strong>Sentry</strong> — receives crash and error diagnostics.</li>
+    <li><strong>Google Cloud</strong> — hosts the server and database.</li>
+  </ul>
+  <p>We disclose data to no one else, except where we are legally required to.</p>
+
+  <h2>Profile photos are stored publicly</h2>
+  <p>If you upload a profile photo, it is stored in a <strong>publicly readable</strong> storage
+  bucket. The web address is hard to guess, but it is not protected by a password or login. Anyone
+  who has the address can view the photo. Please do not upload a photo you would not be comfortable
+  being seen outside your group.</p>
+
+  <h2>How long we keep it</h2>
+  <p><strong>Your location history is automatically deleted after 7 days.</strong> A scheduled job
+  on our server permanently drops location records older than that, every day. We keep a short
+  window only so the app can tell your group leader whose phone has stopped reporting, and so we
+  can diagnose problems during a trip.</p>
+  <p>Your current location (your latest position, the one on the map) is kept until it is replaced
+  by a newer one, or until your account is deleted.</p>
+  <p>Your profile information is kept for as long as your account exists.</p>
+
+  <h2>Deleting your data</h2>
+  <p>You can ask us to delete your account and all associated data — including your entire location
+  history — by emailing <a href="mailto:info@shocute.com">info@shocute.com</a> from the phone number
+  or with the details associated with your account. We will action the request within 30 days.</p>
+
+  <h2>Children</h2>
+  <p>Salamat is not directed at children under 13, and we do not knowingly collect data from them.</p>
+
+  <h2>Permissions Salamat requests</h2>
+  <ul>
+    <li><strong>Location (including background)</strong> — to share your position with your group. Required.</li>
+    <li><strong>Notifications</strong> — to alert you about meeting points and group activity.</li>
+    <li><strong>Camera and photo library</strong> — only if you choose to set a profile photo or attach a photo to a meeting point.</li>
+    <li><strong>Physical activity / motion</strong> — to reduce battery use by slowing location updates when you are not moving.</li>
+    <li><strong>Ignore battery optimisations</strong> — so Android does not suspend location sharing in the background. This is what keeps your family's map from silently going stale.</li>
+  </ul>
+
+  <h2>Changes to this policy</h2>
+  <p>If we change this policy we will update the date at the top of this page.</p>
+
+  <footer>
+    Questions, or a deletion request: <a href="mailto:info@shocute.com">info@shocute.com</a>
+  </footer>
+</main>
+</body>
+</html>
