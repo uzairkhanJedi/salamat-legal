@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salamat — Delete Your Account</title>
+<style>
+  :root { --fg:#1a1a1a; --muted:#5c6672; --accent:#006d5b; --bg:#fff; --rule:#e3e8ec; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#e8eaed; --muted:#9aa5b1; --accent:#3fbfa5; --bg:#14171a; --rule:#2c3237; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 2.5rem 1.25rem 5rem;
+    background: var(--bg); color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .35rem; letter-spacing: -.02em; }
+  h2 {
+    font-size: 1.15rem; margin: 2.5rem 0 .75rem; padding-top: 1.25rem;
+    border-top: 1px solid var(--rule); letter-spacing: -.01em;
+  }
+  .updated { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+  .lede { font-size: 1.05rem; color: var(--fg); }
+  a { color: var(--accent); }
+  strong { font-weight: 600; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .4rem 0; }
+  .callout {
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+    border-left: 3px solid var(--accent);
+    padding: .9rem 1.1rem; border-radius: 0 6px 6px 0; margin: 1.25rem 0;
+  }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Salamat — Delete Your Account</h1>
+  <p class="updated">Last updated: 17 July 2026</p>
+
+  <p class="lede">
+    You can delete your Salamat account and the data attached to it at any time. You do not
+    need to have the app installed to make the request. This page explains how to ask, exactly
+    what gets deleted, and what is kept.
+  </p>
+  <p>Salamat is operated by Uzair Khan. Contact: <a href="mailto:info@shocute.com">info@shocute.com</a></p>
+
+  <h2>How to request deletion</h2>
+  <p>Email <a href="mailto:info@shocute.com?subject=Delete%20my%20Salamat%20account">info@shocute.com</a>
+  with the subject <strong>“Delete my Salamat account”</strong>, and include:</p>
+  <ul>
+    <li>The <strong>phone number</strong> registered to your account, and</li>
+    <li>The <strong>display name</strong> your group sees on the map.</li>
+  </ul>
+  <p>We use those two details to identify your account. If we cannot match them to an account,
+  we will write back and ask — we will not delete someone else's data on a guess.</p>
+  <div class="callout">
+    <strong>We will action your request within 30 days of receiving it</strong>, and email you to
+    confirm once it is done. In practice it is usually the same week. There is no charge, and you
+    do not have to give a reason.
+  </div>
+
+  <h2>Deleting from inside the app</h2>
+  <p>If you still have Salamat installed, you can delete your account yourself without emailing
+  anyone: open <strong>Settings</strong>, scroll to the bottom, and tap <strong>Delete account</strong>.
+  You will be asked to confirm twice, and it takes effect immediately.</p>
+  <p>The in-app button removes your account record and everything that hangs off it — your group
+  membership, your current location, and your full location history. It does <em>not</em> remove
+  your profile photo or the anonymous sign-in record described below. <strong>If you want those
+  removed too, email us</strong> — the email route covers everything on this page.</p>
+
+  <h2>What gets deleted</h2>
+  <p>When we action your request, the following are <strong>permanently deleted</strong> from our
+  server:</p>
+  <ul>
+    <li><strong>Your profile</strong> — phone number, display name, language preference, and push
+    notification token.</li>
+    <li><strong>Your location history</strong> — every stored location reading, in full.</li>
+    <li><strong>Your current location</strong> — the position shown on your group's map, and the
+    battery level shared alongside it.</li>
+    <li><strong>Your group membership</strong> — you are removed from your group. Other members
+    stop seeing you on the map immediately.</li>
+    <li><strong>Your alerts and messages</strong> — anything you sent to, or received from, your
+    group leader.</li>
+    <li><strong>Your profile photo</strong> — the image file itself is removed from storage.</li>
+    <li><strong>Your sign-in record</strong> — the anonymous account Salamat created for you when
+    you first joined with an invite code.</li>
+  </ul>
+
+  <h2>What is kept, and for how long</h2>
+  <p>We want to be straight with you about the small amount that does not disappear:</p>
+  <ul>
+    <li>
+      <strong>Crash diagnostics — up to 90 days.</strong> If the app crashed while you were using
+      it, the crash report is stored by our error-reporting provider (Sentry) and is tagged with
+      your account's random internal ID. These reports contain your app version, device model, and
+      operating system — <strong>never your name, phone number, photo, or location</strong>. They
+      age out automatically within 90 days. Once your account is deleted, the ID they carry no
+      longer points to anything.
+    </li>
+    <li>
+      <strong>Things you created for your group — kept, but no longer linked to you.</strong> If you
+      set a meeting point, or you created the group itself, that content stays so the rest of your
+      group does not lose it. Your name is unlinked from it, so it is no longer attributable to
+      you. Nothing here contains your location or your contact details.
+    </li>
+  </ul>
+  <div class="callout">
+    Nothing we keep can be used to identify you, contact you, or work out where you have been.
+  </div>
+
+  <h2>If you just want to stop sharing your location</h2>
+  <p>Deleting your account is permanent and cannot be undone — you would need a new invite code to
+  rejoin. If you only want to stop sharing your position, you can turn <strong>Location sharing</strong>
+  off in Settings, or leave your group, and keep your account. Your location history is deleted
+  automatically after 7 days either way.</p>
+
+  <h2>More detail</h2>
+  <p>Our <a href="./index.html">Privacy Policy</a> explains everything Salamat collects, why, who
+  can see it, and how long it is kept.</p>
+
+  <footer>
+    Deletion requests and questions: <a href="mailto:info@shocute.com">info@shocute.com</a>
+  </footer>
+</main>
+</body>
+</html>
