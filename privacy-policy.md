@@ -84,9 +84,11 @@ You can ask us to delete your account and all associated data — including your
 location history — by emailing **info@shocute.com** from the phone number or with the
 details associated with your account. We will action the request within 30 days.
 
-You can also delete your account yourself from inside the app, in Settings. See
+Salamat also has a **Delete account** button in Settings, but in every version released so
+far it did not actually work. See
 [Delete Your Account](https://uzairkhanjedi.github.io/salamat-legal/delete-account.html)
-for exactly what is removed, what is kept, and how to ask.
+for the current status, exactly what is removed, what is kept, and how to ask. **Email is the
+reliable route today.**
 
 ## Children
 
