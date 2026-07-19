@@ -1,6 +1,6 @@
 # Salamat — Privacy Policy
 
-**Last updated: 17 July 2026**
+**Last updated: 19 July 2026**
 
 Salamat is a location-sharing app for families and small groups travelling together
 for Hajj and Umrah. It exists so the people in your group can see where each other
