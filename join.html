@@ -127,7 +127,7 @@
       msg.textContent = 'Ask your group leader for the code.';
     }
     btn.addEventListener('click', function () {
-      var plain = raw.replace(/-/g, '');
+      var plain = 'OUTING:' + raw.replace(/-/g, '');
       function done(ok) {
         msg.textContent = ok ? 'Copied — now open the app. · کاپی ہو گیا' : 'Long-press the code to copy it.';
       }
