@@ -1,17 +1,18 @@
-# Salamat — Privacy Policy
+# Outing — Privacy Policy
 
-**Last updated: 19 July 2026**
+**Last updated: 15 August 2026**
 
-Salamat is a location-sharing app for families and small groups travelling together
-for Hajj and Umrah. It exists so the people in your group can see where each other
-are at the holy sites. This policy explains exactly what we collect, why, who can
-see it, and how long we keep it.
+Outing is a private location-sharing map for families and small groups on outings
+and trips — theme parks, day trips, reunions, group travel, and journeys like Hajj
+and Umrah. It exists so the people in your group can see where each other are. This
+policy explains exactly what we collect, why, who can see it, and how long we keep
+it.
 
-Salamat is operated by Uzair Khan. Contact: **info@shocute.com**
+Outing is operated by Uzair Khan. Contact: **info@shocute.com**
 
 ## What we collect
 
-**Location, including in the background.** Salamat records your device's precise
+**Location, including in the background.** Outing records your device's precise
 location (latitude and longitude) and sends it to your group. Collection continues
 when the app is closed or not in use — this is the core purpose of the app. Without
 background location, your family would only see you while you had the app open,
@@ -92,10 +93,10 @@ are running an older version of the app.
 
 ## Children
 
-Salamat is not directed at children under 13, and we do not knowingly collect data
+Outing is not directed at children under 13, and we do not knowingly collect data
 from them.
 
-## Permissions Salamat requests
+## Permissions Outing requests
 
 - **Location (including background)** — to share your position with your group. Required.
 - **Notifications** — to alert you about meeting points and group activity.
