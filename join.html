@@ -92,8 +92,11 @@
       <span class="sub">Android: tap “Become a tester”, then “Download it on Google Play”. The store page is called “com.uzairkhan.salamat (unreviewed)” — that’s the app. Use the same Google account as your Play Store.</span>
     </li>
     <li>
-      <b>Open the app and type the code above</b>
-      <span class="sub">Type your name so family recognises you. · اوپر والا کوڈ لکھیں اور اپنا نام لکھیں</span>
+      <b>Open the app and enter the code above</b>
+      <div class="store">
+        <a id="openLink" class="primary" href="salamat://join">Open in Outing · ایپ کھولیں</a>
+      </div>
+      <span class="sub">The button fills the code in for you. If nothing happens, the app isn’t installed yet — finish step 1 first, or just type the code by hand. · اوپر والا کوڈ لکھیں اور اپنا نام لکھیں</span>
     </li>
     <li>
       <b>Say yes when it asks for location</b>
@@ -119,19 +122,29 @@
     var codeEl = document.getElementById('code');
     var btn = document.getElementById('copyBtn');
     var msg = document.getElementById('copiedMsg');
+    var openLink = document.getElementById('openLink');
     if (raw) {
       codeEl.textContent = raw;
+      // Hand the code to the app over its own URL scheme. Deliberately NOT via
+      // the clipboard: reading the pasteboard on mount made iOS put up the
+      // system paste alert, which froze the app for 3-9s on every tester's
+      // phone (Sentry SALAMAT-17, fixed app-side in v0.8.3).
+      openLink.href = 'salamat://join?code=' + encodeURIComponent(raw.replace(/-/g, ''));
     } else {
       codeEl.textContent = '···· ····';
       codeEl.style.opacity = '.4';
       btn.disabled = true;
       btn.style.opacity = '.5';
+      openLink.removeAttribute('href');
+      openLink.style.opacity = '.5';
       msg.textContent = 'Ask your group leader for the code.';
     }
     btn.addEventListener('click', function () {
-      var plain = 'OUTING:' + raw.replace(/-/g, '');
+      // Bare code, no prefix — this gets pasted into the app's code field by
+      // hand, so it has to match exactly what the field expects.
+      var plain = raw.replace(/-/g, '');
       function done(ok) {
-        msg.textContent = ok ? 'Copied — now open the app. · کاپی ہو گیا' : 'Long-press the code to copy it.';
+        msg.textContent = ok ? 'Copied — paste it into the app. · کاپی ہو گیا' : 'Long-press the code to copy it.';
       }
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(plain).then(function(){done(true);}, function(){done(false);});
