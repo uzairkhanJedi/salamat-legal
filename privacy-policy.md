@@ -51,12 +51,12 @@ purpose other than showing it to your own group.**
 the group you join.** That is the point of the app. They are not visible to the
 public, and they are not visible to members of other groups.
 
-Your data is stored on a private server operated by us on Google Cloud
-infrastructure. The following third parties process limited data on our behalf:
+Your data is stored in a database operated by us on **Supabase** (hosted on
+Amazon Web Services in Montréal, Canada). The following third parties process limited data on our behalf:
 
 - **Google Firebase Cloud Messaging** — delivers push notifications.
 - **Sentry** — receives crash and error diagnostics.
-- **Google Cloud** — hosts the server and database.
+- **Supabase / Amazon Web Services** — hosts the database and server infrastructure (Montréal, Canada).
 
 We disclose data to no one else, except where we are legally required to.
 
