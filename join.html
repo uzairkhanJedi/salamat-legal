@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Join an Outing group</title>
+<title>Join an Outing</title>
 <style>
   :root { --fg:#1a1a1a; --muted:#5c6672; --accent:#006d5b; --bg:#fff; --rule:#e3e8ec; --card:#f6f8f7; }
   @media (prefers-color-scheme: dark) {
@@ -50,6 +50,7 @@
   }
   ol.steps b { display:block; margin-bottom:.15rem; }
   ol.steps .sub { color: var(--muted); font-size:.95rem; }
+  ol.steps .urd { display:block; direction:rtl; text-align:right; margin-top:.35rem; }
   .store { display:flex; flex-direction:column; gap:.6rem; margin-top:.6rem; }
   .store a {
     display:block; text-align:center; text-decoration:none; font-weight:600; font-size:1rem;
@@ -71,12 +72,12 @@
 <main>
   <div class="brand"><span class="moon">☀</span><b>Outing</b></div>
 
-  <h1>Join the group</h1>
-  <p class="ur">گروپ میں شامل ہونے کے لیے نیچے کے تین قدم پورے کریں</p>
+  <h1>Join the outing</h1>
+  <p class="ur">شامل ہونے کے لیے نیچے کے چار قدم پورے کریں</p>
 
   <div class="codecard">
-    <div class="label">Your invite code · دعوتی کوڈ</div>
-    <div id="code">— — — —</div>
+    <div class="label">Your outing code · دعوتی کوڈ</div>
+    <div id="code">······</div>
     <button id="copyBtn" type="button">Copy code · کوڈ کاپی کریں</button>
     <div class="copied" id="copiedMsg"></div>
   </div>
@@ -89,25 +90,31 @@
         <a id="androidLink" class="primary" href="https://play.google.com/apps/internaltest/4701223472837903602">Get it on Google Play (Android)</a>
         <a id="iosLink" href="https://testflight.apple.com/join/XSSxb2KH">Get it on iPhone (TestFlight)</a>
       </div>
-      <span class="sub">Android: tap “Become a tester”, then “Download it on Google Play”. The store page is called “com.uzairkhan.salamat (unreviewed)” — that’s the app. Use the same Google account as your Play Store.</span>
+      <span class="sub">Android: tap “Become a tester”, then “Download it on Google Play”. The store page is called “com.uzairkhan.salamat (unreviewed)” — that’s the app. Use the same Google account as your Play Store. If it says “Item not found”, send me the Gmail address on that phone and I’ll add it.<br>
+      iPhone: it will ask you to install TestFlight first — that’s Apple’s app for trying new apps. Install it, then tap the link again.</span>
     </li>
     <li>
-      <b>Open the app and enter the code above</b>
+      <b>Open the app and make your account</b>
+      <span class="sub">Tap <strong>Continue with email</strong>, type your email address, and enter the 6-digit code we send you (it arrives in a minute or two — check spam). <em>Continue with Apple</em> and <em>Continue with Google</em> work too, if you prefer. <span class="urd">ایپ کھولیں، اپنا ای میل لکھیں، اور ای میل میں آنے والا 6 ہندسوں کا کوڈ لکھیں</span></span>
+    </li>
+    <li>
+      <b>Join the outing with the code above</b>
       <div class="store">
-        <a id="openLink" class="primary" href="salamat://join">Open in Outing · ایپ کھولیں</a>
+        <a id="openLink" class="primary" href="https://outingapp.io/j/">Open in Outing · ایپ کھولیں</a>
       </div>
-      <span class="sub">The button fills the code in for you. If nothing happens, the app isn’t installed yet — finish step 1 first, or just type the code by hand. · اوپر والا کوڈ لکھیں اور اپنا نام لکھیں</span>
+      <span class="sub">The button fills the code in for you. Nothing happened? Open Outing yourself, tap <strong>Join an outing</strong>, type the six characters, then tap <strong>Ask to join</strong>.<br>
+      If it then says <strong>“Request sent — waiting for … to approve”</strong>, that is normal: I approve you and you’re in. If I sent you a personal invite link instead, just tap that link — it takes you straight in. <span class="urd">اوپر والا کوڈ لکھیں؛ اگر «Request sent» لکھا آئے تو یہ ٹھیک ہے، لیڈر منظوری دے گا</span></span>
     </li>
     <li>
       <b>Say yes when it asks for location</b>
-      <span class="sub">Choose “Allow all the time” so family can find you even when your screen is off. · لوکیشن کی اجازت میں «ہر وقت» چنیں</span>
+      <span class="sub">Choose “Allow all the time” (iPhone: “Always Allow”) so family can find you even when your screen is off. iPhone asks a second time a few days later — choose <strong>Keep Always</strong>. <span class="urd">لوکیشن کی اجازت میں «ہر وقت» چنیں</span></span>
     </li>
   </ol>
 
   <p class="privacy">
-    Your location is visible <strong>only to your own group</strong> — never sold, never shared.
-    Location history deletes itself after 7 days.
-    <span class="ur2">آپ کی لوکیشن صرف آپ کے گروپ کو نظر آتی ہے۔ سات دن بعد ریکارڈ خود مٹ جاتا ہے۔</span>
+    Your location is visible <strong>only to the people in your outing</strong>, and only while it is running — never sold, never shared.
+    Location history deletes itself after 7 days. If the leader switches on route history for an outing, that outing’s replay is kept for the period they choose (7–90 days) and you can delete your own track at any time.
+    <span class="ur2">آپ کی لوکیشن صرف آپ کے گروپ کو، اور صرف آؤٹنگ کے دوران نظر آتی ہے۔ سات دن بعد ریکارڈ خود مٹ جاتا ہے۔</span>
   </p>
 
   <footer>
@@ -117,39 +124,56 @@
 </main>
 <script>
   (function () {
+    // Mirrors OUTING_CODE_ALPHABET / CODE_LENGTH in salamat/src/lib/outings/types.ts.
+    // I, L, O, 0 and 1 are excluded so a handwritten or read-aloud code can't be
+    // confused; anything else is not a code this app can accept.
+    var ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+    var CODE_LENGTH = 6;
+
     var params = new URLSearchParams(location.search);
-    var raw = (params.get('c') || '').replace(/[^A-Za-z0-9-]/g, '').toUpperCase();
+    var raw = (params.get('c') || '').toUpperCase().replace(/[\s-]/g, '');
+    var valid = raw.length === CODE_LENGTH;
+    for (var i = 0; i < raw.length; i++) {
+      if (ALPHABET.indexOf(raw.charAt(i)) === -1) valid = false;
+    }
+
     var codeEl = document.getElementById('code');
     var btn = document.getElementById('copyBtn');
     var msg = document.getElementById('copiedMsg');
     var openLink = document.getElementById('openLink');
-    if (raw) {
+
+    if (valid) {
       codeEl.textContent = raw;
-      // Hand the code to the app over its own URL scheme. Deliberately NOT via
-      // the clipboard: reading the pasteboard on mount made iOS put up the
+      // The app link the app itself shares (`joinCodeUrl`) and the one its QR
+      // encodes: https://outingapp.io/j/<CODE>. Verified by assetlinks.json /
+      // apple-app-site-association on that host, so an installed app opens
+      // straight on Join with the code filled in. Deliberately NOT handed over
+      // by clipboard: reading the pasteboard on mount made iOS put up the
       // system paste alert, which froze the app for 3-9s on every tester's
       // phone (Sentry SALAMAT-17, fixed app-side in v0.8.3).
-      openLink.href = 'salamat://join?code=' + encodeURIComponent(raw.replace(/-/g, ''));
+      openLink.href = 'https://outingapp.io/j/' + encodeURIComponent(raw);
     } else {
-      codeEl.textContent = '···· ····';
+      codeEl.textContent = '······';
       codeEl.style.opacity = '.4';
       btn.disabled = true;
       btn.style.opacity = '.5';
       openLink.removeAttribute('href');
       openLink.style.opacity = '.5';
-      msg.textContent = 'Ask your group leader for the code.';
+      msg.textContent = 'Ask your group leader for the six-character code.';
     }
+
     btn.addEventListener('click', function () {
       // Bare code, no prefix — this gets pasted into the app's code field by
-      // hand, so it has to match exactly what the field expects.
-      var plain = raw.replace(/-/g, '');
+      // hand, and its sanitiser keeps only alphabet characters, so a tagged
+      // value like OUTING:ABC234 would paste as something else entirely.
       function done(ok) {
         msg.textContent = ok ? 'Copied — paste it into the app. · کاپی ہو گیا' : 'Long-press the code to copy it.';
       }
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(plain).then(function(){done(true);}, function(){done(false);});
+        navigator.clipboard.writeText(raw).then(function(){done(true);}, function(){done(false);});
       } else { done(false); }
     });
+
     // Put the visitor's own platform first.
     var ua = navigator.userAgent || '';
     if (/iPhone|iPad|iPod/i.test(ua)) {
