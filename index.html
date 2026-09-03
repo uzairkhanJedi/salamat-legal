@@ -39,7 +39,7 @@
 <body>
 <main>
   <h1>Outing — Privacy Policy</h1>
-  <p class="updated">Last updated: 15 August 2026</p>
+  <p class="updated">Last updated: 3 September 2026</p>
 
   <p class="lede">
     Outing is a private location-sharing map for families and small groups on outings and
@@ -66,6 +66,20 @@
   <p><strong>Diagnostics.</strong> Crash reports and error diagnostics, collected via Sentry, to fix
   bugs. These may include your app version, device model, and operating system version.</p>
 
+  <p><strong>Product analytics.</strong> A record of a few specific things happening in the app,
+  collected via PostHog, so we can tell where it stops working for people. We record: that you
+  signed in and which method you used; that you created or joined an outing, and by which route;
+  whether you granted background location permission; what you chose on the Android autostart
+  screen; and the first time your phone successfully sent a background location update. Each of
+  these carries your app version, device model, and operating system version.</p>
+  <div class="callout">
+    <strong>We do not send your location to our analytics provider — not the coordinates, not a
+    place name, not a city.</strong> The events above record <em>that</em> you granted permission
+    or <em>that</em> an update went through, never where you were. We also switch off the
+    provider's ability to guess your city from your internet connection. Analytics never records
+    what you type, what an outing is called, who is in it, or what anyone's screen looks like.
+  </div>
+
   <h2>Why we collect it</h2>
   <p>We use this data only to operate the app:</p>
   <ul>
@@ -88,6 +102,8 @@
   <ul>
     <li><strong>Google Firebase Cloud Messaging</strong> — delivers push notifications.</li>
     <li><strong>Sentry</strong> — receives crash and error diagnostics.</li>
+    <li><strong>PostHog</strong> — receives the product-analytics events described above, on servers in the European Union.</li>
+    <li><strong>Mapbox</strong> — looks up place names and directions when you have a network connection. This only happens while you're online; it does not happen for offline maps.</li>
     <li><strong>Supabase / Amazon Web Services</strong> — hosts the database and server infrastructure (Montréal, Canada).</li>
   </ul>
   <p>We disclose data to no one else, except where we are legally required to.</p>
