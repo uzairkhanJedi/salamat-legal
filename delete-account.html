@@ -3,174 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Outing — Delete Your Account</title>
+<title>Outing — Delete Your Account (moved)</title>
+<!-- This page moved on 2026-09-04. The canonical account-deletion page is
+     https://outingapp.io/delete-account, served from
+     infrastructure/well-known/delete-account/index.html in the app repo and
+     linked from https://outingapp.io/privacy and the Google Play listing.
+     This file is kept only so old links keep working. This repository is
+     archived; do not edit the content here. -->
+<link rel="canonical" href="https://outingapp.io/delete-account">
+<meta http-equiv="refresh" content="0; url=https://outingapp.io/delete-account">
+<script>location.replace("https://outingapp.io/delete-account");</script>
 <style>
-  :root { --fg:#1a1a1a; --muted:#5c6672; --accent:#006d5b; --bg:#fff; --rule:#e3e8ec; }
-  @media (prefers-color-scheme: dark) {
-    :root { --fg:#e8eaed; --muted:#9aa5b1; --accent:#3fbfa5; --bg:#14171a; --rule:#2c3237; }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; padding: 2.5rem 1.25rem 5rem;
-    background: var(--bg); color: var(--fg);
-    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    -webkit-text-size-adjust: 100%;
-  }
-  main { max-width: 46rem; margin: 0 auto; }
-  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .35rem; letter-spacing: -.02em; }
-  h2 {
-    font-size: 1.15rem; margin: 2.5rem 0 .75rem; padding-top: 1.25rem;
-    border-top: 1px solid var(--rule); letter-spacing: -.01em;
-  }
-  .updated { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
-  .lede { font-size: 1.05rem; color: var(--fg); }
-  a { color: var(--accent); }
-  strong { font-weight: 600; }
-  ul { padding-left: 1.25rem; }
-  li { margin: .4rem 0; }
-  .callout {
-    background: color-mix(in srgb, var(--accent) 8%, transparent);
-    border-left: 3px solid var(--accent);
-    padding: .9rem 1.1rem; border-radius: 0 6px 6px 0; margin: 1.25rem 0;
-  }
-  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
+  body { margin: 0; padding: 3rem 1.25rem; font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a1a1a; background: #fff; }
+  main { max-width: 40rem; margin: 0 auto; }
+  a { color: #006d5b; }
 </style>
 </head>
 <body>
 <main>
-  <h1>Outing — Delete Your Account</h1>
-  <p class="updated">Last updated: 3 September 2026</p>
-
-  <p class="lede">
-    You can delete your Outing account and the data attached to it at any time. You do not
-    need to have the app installed to make the request. This page explains how to ask, exactly
-    what gets deleted, and what is kept.
-  </p>
-  <p>Outing is operated by Uzair Khan. Contact: <a href="mailto:hello@outingapp.io">hello@outingapp.io</a></p>
-
-  <h2>How to request deletion</h2>
-  <p><strong>Email <a href="mailto:hello@outingapp.io?subject=Delete%20my%20Outing%20account">hello@outingapp.io</a>
-  from the email address on your account</strong>, with the subject
-  <strong>“Delete my Outing account”</strong>. That is all we need — the address you send from is
-  what identifies you.</p>
-  <p>If you signed in with Apple or Google, use the address that sign-in gave us; it is shown in
-  the app under <strong>You → Account</strong>. Adding your <strong>display name</strong> helps us
-  find you faster, but it is not required.</p>
-  <p>Because deletion is permanent, we act on the address you write from rather than on details
-  someone else could know — the people in your outings already know your name. <strong>If you
-  cannot send from that address</strong> — you have lost access to the mailbox, or you used Sign in
-  with Apple’s “Hide My Email” — write to us anyway and say so, and we will agree another way to
-  confirm it is you before anything is deleted. If we cannot match your request to an account, or
-  cannot satisfy ourselves that it is yours, we will write back and ask.
-  <strong>We will not delete an account on a guess.</strong></p>
-  <div class="callout">
-    <strong>We will action your request within 30 days of receiving it</strong>, and email you to
-    confirm once it is done. In practice it is usually the same week. There is no charge, and you
-    do not have to give a reason.
-  </div>
-
-  <h2>Deleting from inside the app</h2>
-  <p>Open <strong>You → Account → Delete account</strong> and confirm twice. It takes effect
-  immediately, and it removes everything listed under <a href="#deleted">what gets deleted</a> —
-  including your profile photo and your sign-in methods. You do not need to email us as well.
-  This is the fastest route, and it needs no identity check because you are already signed in.</p>
-  <div class="callout">
-    <p><strong>A past bug, recorded here because it was ours.</strong> In every version released
-    before <strong>19 July 2026</strong>, this button did not actually delete anything — it signed
-    you out and reported success while your profile, photo and location history stayed on our
-    server. It was fixed that day and has worked since. We are sorry; it was wrong for as long as
-    the button existed. If you deleted your account before that date, it did not take effect —
-    please use the email route above and we will finish it properly.</p>
-  </div>
-
-  <h2 id="deleted">What gets deleted</h2>
-  <p>When we action your request, the following are <strong>permanently deleted</strong> from our
-  server — not hidden or deactivated, but erased. Please also read
-  <a href="#kept">what is kept</a> below, which is short and honest about the exceptions.</p>
-  <ul>
-    <li><strong>Your profile</strong> — email address, display name, language preference, and push
-    notification token.</li>
-    <li><strong>Your location history</strong> — every stored location reading, in full.</li>
-    <li><strong>Your current location</strong> — the position shown on an outing's map, and the
-    battery level shared alongside it.</li>
-    <li><strong>Your outing memberships</strong> — you are removed from every outing you are in.
-    The other members stop seeing you on the map immediately.</li>
-    <li><strong>Your messages and alerts</strong> — the outing chat messages you sent, the alerts
-    you exchanged with a leader in both directions, and any announcements you sent.</li>
-    <li><strong>Your invites and requests</strong> — invites you sent or received, and any join
-    requests, along with the people connections shown on your People tab.</li>
-    <li><strong>Your profile photo</strong> — every image file you uploaded is removed from
-    storage, not just the one currently shown.</li>
-    <li><strong>Your sign-in methods</strong> — your account itself, including any passkey and any
-    Sign in with Apple or Google link.</li>
-  </ul>
-
-  <div class="callout">
-    <strong>If you lead an outing, we hand it over before deleting you.</strong> Any outing you
-    lead that is live or still to come is passed to another member — a co-broadcaster if there is
-    one, otherwise the longest-standing member — so nobody is left in an outing that cannot be
-    ended or extended. If you are its only member, the outing simply ends.
-  </div>
-
-  <h2 id="kept">What is kept, and for how long</h2>
-  <p>We want to be straight with you about the small amount that does not disappear:</p>
-  <ul>
-    <li>
-      <strong>Crash diagnostics — up to 90 days.</strong> If the app crashed while you were using
-      it, the crash report is stored by our error-reporting provider (Sentry) and is tagged with
-      your account's random internal ID. These reports contain your app version, device model, and
-      operating system — <strong>never your name, email address, photo, or location</strong>. They
-      age out automatically within 90 days. Once your account is deleted, the ID they carry no
-      longer points to anything.
-    </li>
-    <li>
-      <strong>Product-analytics events — kept.</strong> A small set of events recording that you
-      signed in, that you created or joined an outing, whether you granted location permission,
-      and whether your phone managed to send a background update. They are stored by our analytics
-      provider (PostHog, in the European Union) and tagged with the same random internal ID. They
-      contain <strong>no location of any kind</strong> — not coordinates, not a place name, not a
-      city — and no name, email address or photo. Once your account is deleted, the ID they carry
-      no longer points to anything.
-    </li>
-    <li>
-      <strong>Things you created for an outing — kept, but no longer linked to you.</strong> If you
-      set a meeting point, or created the outing itself, that content stays so the other members do
-      not lose it. Your name is unlinked from it, so it is no longer attributable to you. Nothing
-      here contains your location or your contact details.
-    </li>
-    <li>
-      <strong>Announcements a leader sent you — kept.</strong> These belong to that leader's
-      account rather than yours, so deleting your account does not remove them. If a leader wrote
-      your name into the text of an announcement, that text stays until they delete it or delete
-      their own account.
-    </li>
-  </ul>
-  <div class="callout">
-    <strong>We keep no ongoing backups.</strong> When your data is deleted it is gone from our
-    server, not moved to an archive we could restore it from. Nothing we keep after your request can
-    be used to identify you, contact you, or work out where you have been.
-    <br /><br />
-    <strong>One temporary exception:</strong> on August 21, 2026 we moved our server from Google
-    Cloud (Doha) to Supabase (Montréal, Canada). The old server and its one-time migration copy are
-    kept for roughly one week after the move as a safety net, then permanently destroyed. If you
-    delete your account during that week, your data is removed from the live server immediately, but
-    a copy may persist in the migration snapshot until it is destroyed (by mid-September 2026 at the
-    latest).
-  </div>
-
-  <h2>If you just want to stop sharing your location</h2>
-  <p>Deleting your account is permanent and cannot be undone — you would need a new invite code to
-  rejoin. If you only want to stop sharing your position, you can turn <strong>Location sharing</strong>
-  off in Settings, or leave your group, and keep your account. Your location history is deleted
-  automatically after 7 days either way.</p>
-
-  <h2>More detail</h2>
-  <p>Our <a href="./index.html">Privacy Policy</a> explains everything Outing collects, why, who
-  can see it, and how long it is kept.</p>
-
-  <footer>
-    Deletion requests and questions: <a href="mailto:hello@outingapp.io">hello@outingapp.io</a>
-  </footer>
+  <h1>This page has moved</h1>
+  <p>The Outing account-deletion page now lives at
+  <a href="https://outingapp.io/delete-account">outingapp.io/delete-account</a>.
+  You should be taken there automatically.</p>
 </main>
 </body>
 </html>
